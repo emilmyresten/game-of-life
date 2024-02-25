@@ -93,10 +93,11 @@ char* initialize() {
 
 void print_board(char* board) {
 	for(int r = 0; r < rows; r++) {
-		char row[cols];
+		char row[cols + 1];
 		for (int c = 0; c < cols; c++) {
 			row[c] = board[r * cols + c];
 		}
+		row[cols] = '\0';
 		printf("%s\n", row);
 	}
 }
